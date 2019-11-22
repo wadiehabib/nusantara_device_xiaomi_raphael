@@ -94,4 +94,7 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
+
+    <!-- FPS Counter -->
+    <string name="fps_info_title">FPS Counter</string>
 </resources>
