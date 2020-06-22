@@ -30,3 +30,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 #Priv-app permission
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
+
+# Seamless transfer
+PRODUCT_PRODUCT_PROPERTIES += \
+    sys.fflag.override.settings_seamless_transfer=true
