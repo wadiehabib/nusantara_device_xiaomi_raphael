@@ -17,7 +17,7 @@ endif
 
 # Dex2oat
 PRODUCT_PRODUCT_PROPERTIES += \
-     dalvik.vm.dex2oat64.enabled=true
+    dalvik.vm.dex2oat64.enabled=true
 
 # Media
 PRODUCT_PRODUCT_PROPERTIES += \
