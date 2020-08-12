@@ -18,3 +18,4 @@ type sysfs_kgsl, sysfs_type, fs_type;
 # sysfs
 type sysfs_ledcit, sysfs_type, fs_type;
 type qr_code_file, fs_type;
+type sysfs_fps, sysfs_type, fs_type;
