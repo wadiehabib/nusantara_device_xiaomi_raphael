@@ -434,6 +434,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     WifiResCommon \
+    TetheringConfigOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
