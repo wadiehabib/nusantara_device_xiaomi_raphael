@@ -202,6 +202,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
+PRODUCT_PACKAGES += \
+    disable_configstore
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
