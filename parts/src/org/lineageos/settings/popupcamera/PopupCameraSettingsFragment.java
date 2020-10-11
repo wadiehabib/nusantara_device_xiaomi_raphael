@@ -21,17 +21,25 @@ import android.view.MenuItem;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.Preference.OnPreferenceClickListener;
 import androidx.preference.PreferenceFragment;
 
 import org.lineageos.settings.R;
 
-public class PopupCameraSettingsFragment extends PreferenceFragment implements
-        OnPreferenceChangeListener {
+public class PopupCameraSettingsFragment extends PreferenceFragment
+        implements OnPreferenceChangeListener, OnPreferenceClickListener {
+    private Preference mCalibrationPreference;
+    private static final String MOTOR_CALIBRATION_KEY = "motor_calibration";
+
+    private PopupCameraService mPopupCameraService = new PopupCameraService();
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.popup_settings);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+		
+        mCalibrationPreference = (Preference) findPreference(MOTOR_CALIBRATION_KEY);
+        mCalibrationPreference.setOnPreferenceClickListener(this);
     }
 
     @Override
@@ -47,4 +55,14 @@ public class PopupCameraSettingsFragment extends PreferenceFragment implements
         }
         return false;
     }
+
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+        if (MOTOR_CALIBRATION_KEY.equals(preference.getKey())) {
+            mPopupCameraService.calibrateMotor();
+            return true;
+        }
+        return false;
+    }
 }
+
