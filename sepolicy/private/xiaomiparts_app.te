@@ -1,9 +1,11 @@
 app_domain(xiaomiparts_app)
 
 hal_client_domain(xiaomiparts_app, hal_motor)
+hal_client_domain(xiaomiparts_app, hal_touchfeature)
 
 binder_call(xiaomiparts_app, gpuservice)
 binder_call(xiaomiparts_app, hal_motor)
+binder_call(xiaomiparts_app, hal_touchfeature)
 
 allow xiaomiparts_app {
   activity_service
