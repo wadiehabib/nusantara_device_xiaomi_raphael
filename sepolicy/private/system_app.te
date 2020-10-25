@@ -1,0 +1,2 @@
+# fm_radio app needs open read write on fm_radio_device
+allow system_app fm_radio_device:chr_file r_file_perms;
