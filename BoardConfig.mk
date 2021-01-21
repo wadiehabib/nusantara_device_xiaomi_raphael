@@ -178,3 +178,6 @@ WIFI_HIDL_FEATURE_AWARE := false
 
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 SELINUX_IGNORE_NEVERALLOWS := true
+
+# FOD key for InputDispatcher to skip
+TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 338
