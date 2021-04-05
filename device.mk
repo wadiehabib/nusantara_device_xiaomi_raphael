@@ -57,7 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
+    Snap
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
