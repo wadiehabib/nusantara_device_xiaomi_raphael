@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_raphael.mk
+    $(LOCAL_DIR)/nad_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_raphael-user \
-    arrow_raphael-userdebug \
-    arrow_raphael-eng
+    nad_raphael-user \
+    nad_raphael-userdebug \
+    nad_raphael-eng

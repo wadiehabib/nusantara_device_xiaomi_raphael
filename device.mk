@@ -23,7 +23,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-nad
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
 
 # Binder
 PRODUCT_PACKAGES += \
-    libhwbinder \
+    libhwbinder
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -73,8 +73,12 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
+# FOD
 PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
+
+PRODUCT_COPY_FILES += \
+    vendor/nusantara/prebuilt/common/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # FM
 PRODUCT_PACKAGES += \
@@ -86,7 +90,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
-    libhidltransport \
+    libhidltransport
 
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
@@ -113,7 +117,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/sm8150-tavil-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/sm8150-tavil-snd-card_Button_Jack.kl
 
-# Livedisplay
+# Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl.raphael
 
