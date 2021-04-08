@@ -75,14 +75,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>com.qualcomm.qti.dpm.api</name>
-        <version>1.0</version>
-        <interface>
-            <name>IdpmQmi</name>
-            <instance>dpmQmiService</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>com.qualcomm.qti.imscmservice</name>
         <version>2.0-2</version>
         <interface>

@@ -23,12 +23,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.enableTOFInterface=TRUE \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
-# CNE and DPM
+# CNE
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1 \
-    persist.vendor.dpm.feature=1 \
-    persist.vendor.dpm.loglevel=0 \
-    persist.vendor.dpm.nsrm.bkg.evt=3955
+    persist.vendor.cne.feature=1
 
 # Data Modules
 PRODUCT_PROPERTY_OVERRIDES += \
