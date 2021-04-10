@@ -19,7 +19,6 @@ type sysfs_kgsl, sysfs_type, fs_type;
 type sysfs_ledcit, sysfs_type, fs_type;
 type qr_code_file, fs_type;
 type sysfs_fps, sysfs_type, fs_type;
-type sysfs_device_info, sysfs_type, fs_type;
 
 #define the files writter during the operatio of iop
 type iop_socket, file_type;
