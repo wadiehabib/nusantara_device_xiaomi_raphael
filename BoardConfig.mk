@@ -155,6 +155,9 @@ TARGET_TAP_TO_WAKE_NODE := "/dev/input/event3"
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
+# USB
+TARGET_QTI_USB_SUPPORTS_AUDIO_ACCESSORY := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 ifeq ($(BOARD_AVB_ENABLE), true)
