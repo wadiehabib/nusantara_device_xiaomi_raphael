@@ -165,6 +165,9 @@ ifeq ($(BOARD_AVB_ENABLE), true)
    BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 endif
 
+# WiFi
+WIFI_HIDL_FEATURE_AWARE := false
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/raphael/BoardConfigVendor.mk
 
