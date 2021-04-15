@@ -172,5 +172,5 @@ endif
 # Inherit from the proprietary version
 -include vendor/xiaomi/raphael/BoardConfigVendor.mk
 
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-SELINUX_IGNORE_NEVERALLOWS := true
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+#SELINUX_IGNORE_NEVERALLOWS := true
