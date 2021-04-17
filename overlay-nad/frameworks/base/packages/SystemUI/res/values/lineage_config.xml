@@ -16,4 +16,7 @@
 <resources>
     <!-- Color of the FOD view -->
     <color name="config_fodColor">#00ffffff</color>
+
+    <!-- FOD recognizing animation vertical position offset -->
+    <dimen name="fod_animation_offset">3dp</dimen>
 </resources>
