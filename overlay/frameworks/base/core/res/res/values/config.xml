@@ -428,5 +428,8 @@
 
     <!-- Screen off FOD -->
     <bool name="config_supportsScreenOffInDisplayFingerprint">true</bool>
+
+    <!-- FOD Icon Dimming -->
+    <bool name="config_targetUsesInKernelDimming">false</bool>
 </resources>
 
