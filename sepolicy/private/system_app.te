@@ -3,3 +3,7 @@ allow system_app fm_radio_device:chr_file r_file_perms;
 
 # Battery Health
 r_dir_file(system_app, sysfs_battery_supply)
+allow system_app sysfs_battery_supply:dir { search };
+allow system_app sysfs_battery_supply:file { read };
+allow system_app sysfs_battery_supply:file { open };
+allow system_app sysfs_battery_supply:file { getattr };
