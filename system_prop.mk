@@ -136,3 +136,7 @@ PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=21000000
 # Iorap
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
+
+# Scroll optimization
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.perf.scroll_opt=true
