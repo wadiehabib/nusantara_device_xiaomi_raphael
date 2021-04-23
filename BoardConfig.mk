@@ -173,4 +173,4 @@ endif
 -include vendor/xiaomi/raphael/BoardConfigVendor.mk
 
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-#SELINUX_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS := true
