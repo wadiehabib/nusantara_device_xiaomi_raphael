@@ -141,6 +141,6 @@ iorapd.readahead.enable=true
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.perf.scroll_opt=true
 
-# Vulkan
+# SkiaGL
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.hwui.renderer=skiavk
+    debug.hwui.renderer=skiagl
