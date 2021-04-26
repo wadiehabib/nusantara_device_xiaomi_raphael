@@ -1,3 +1,11 @@
 type hal_perf_default, domain, mlstrustedsubject;
-
+type hal_perf_default_exec, exec_type, vendor_file_type, file_type;
 r_dir_file(hal_perf_default, system_server)
+
+allow hal_perf_default {
+ sysfs_battery_supply
+}:dir r_dir_perms;
+
+allow hal_perf_default {
+ sysfs_battery_supply
+}:file rw_file_perms;
