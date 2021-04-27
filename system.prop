@@ -1,3 +1,7 @@
+# Camera 
+persist.vendor.camera.privapp.list=com.android.camera 
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.GoogleCamera.BurSLR11
+
 # Display
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
