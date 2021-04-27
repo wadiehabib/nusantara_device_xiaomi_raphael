@@ -54,10 +54,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothQti
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -84,6 +80,13 @@ PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
     qcom.fmradio
+
+# GoogleCamera
+PRODUCT_PACKAGES += \
+    GoogleCamera
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/GoogleCamera/privapp-permissions-googlecamera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-googlecamera.xml
 
 # HIDL
 PRODUCT_PACKAGES += \
