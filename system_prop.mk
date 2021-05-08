@@ -48,6 +48,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.displayfeature.dc_backlight.enable=false \
     persist.fod.modified.dc_status=false \
     sys.displayfeature.hbm.enable=true
+    
+    # Fingerprint
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.fp.fod=true \
+    persist.vendor.sys.fp.fod.location.X_Y=445,1931 \
+    persist.vendor.sys.fp.fod.size.width_height=190,190
 
 # GBoard
 PRODUCT_PROPERTY_OVERRIDES += \

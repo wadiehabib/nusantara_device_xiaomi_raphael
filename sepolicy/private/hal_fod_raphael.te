@@ -21,3 +21,6 @@ hal_client_domain(hal_fod_raphael, hal_fingerprint)
 
 # Allow to use wakelock
 wakelock_use(hal_fod_raphael)
+
+# Allow hal_fod_raphael to read from vendor_fp_prop
+allow hal_fod_raphael vendor_fp_prop:file { getattr map open read };
