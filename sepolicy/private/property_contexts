@@ -8,3 +8,10 @@ persist.sensor.                u:object_r:sensors_prop:s0
 persist.vendor.sys.fp.fod.location.X_Y        u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.fod.size.width_height   u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.vendor                  u:object_r:vendor_fp_prop:s0
+
+#adsprpc
+vendor.fastrpc.debug.trace     u:object_r:vendor_adsprpc_prop:s0 exact int
+vendor.fastrpc.perf.adsp       u:object_r:vendor_adsprpc_prop:s0 exact int
+vendor.fastrpc.perf.freq       u:object_r:vendor_adsprpc_prop:s0 exact int
+vendor.fastrpc.perf.kernel     u:object_r:vendor_adsprpc_prop:s0 exact int
+vendor.fastrpc.process.attrs   u:object_r:vendor_adsprpc_prop:s0 exact int

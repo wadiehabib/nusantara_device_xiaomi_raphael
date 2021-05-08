@@ -1,0 +1,16 @@
+type hal_neuralnetworks_default, domain;
+
+type hal_neuralnetworks_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_neuralnetworks_default)
+
+hal_server_domain(hal_neuralnetworks_default, hal_neuralnetworks)
+
+allow hal_neuralnetworks_default hal_neuralnetworks_data_file:dir create_dir_perms;
+allow hal_neuralnetworks_default hal_neuralnetworks_data_file:{ file fifo_file } create_file_perms;
+allow hal_neuralnetworks_default qdsp_device:chr_file r_file_perms;
+allow hal_neuralnetworks_default default_prop:file { read map };
+allow hal_neuralnetworks_default system_file:file { map read execute };
+allow hal_neuralnetworks_default vendor_adsprpc_prop:file { read };
+
+r_dir_file(hal_neuralnetworks_default, sysfs_soc)
+r_dir_file(hal_neuralnetworks_default, adsprpcd_file)

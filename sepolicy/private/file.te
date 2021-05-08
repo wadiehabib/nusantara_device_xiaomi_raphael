@@ -2,7 +2,6 @@
 type display_data_file, data_file_type, core_data_file_type, file_type;
 
 # firmware
-type adsprpcd_file, file_type;
 type bt_firmware_file, file_type;
 type firmware_file, file_type;
 type persist_file, file_type;
@@ -24,3 +23,22 @@ type sysfs_device_info, sysfs_type, fs_type;
 #define the files writter during the operatio of iop
 type iop_socket, file_type;
 type iop_data_file, file_type, data_file_type;
+
+# Files accessed by qcom-system-daemon
+type sysfs_soc, sysfs_type, fs_type;
+type sysfs_socinfo, fs_type, sysfs_type;
+
+# used for /dsp files
+type adsprpcd_file, file_type, mlstrustedobject, vendor_file_type;
+
+#NNHAL files
+type hal_neuralnetworks_data_file, file_type, data_file_type;
+
+type sysfs_mpdecision, fs_type, sysfs_type;
+type sysfs_devfreq, fs_type, sysfs_type;
+type sysfs_cpu_boost, fs_type, sysfs_type;
+type sysfs_memory, fs_type, sysfs_type;
+type sysfs_msm_perf, fs_type, sysfs_type;
+type sysfs_msm_power, fs_type, sysfs_type;
+type lm_data_file, file_type, data_file_type;
+type sysfs_lib, fs_type, sysfs_type;

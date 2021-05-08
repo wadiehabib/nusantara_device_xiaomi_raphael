@@ -2,10 +2,44 @@ type hal_perf_default, domain, mlstrustedsubject;
 type hal_perf_default_exec, exec_type, vendor_file_type, file_type;
 r_dir_file(hal_perf_default, system_server)
 
+allow hal_perf_default lm_data_file:dir rw_dir_perms;
+allow hal_perf_default lm_data_file:file create_file_perms;
+allow hal_perf_default cgroup:file r_file_perms;
+allow hal_perf_default proc:file rw_file_perms;
+allow hal_perf_default device_latency:chr_file rw_file_perms;
+allow hal_perf_default sysfs_lib:file w_file_perms;
+
+get_prop(hal_perf_default, freq_prop)
+
+r_dir_file(hal_perf_default, appdomain);
+allow hal_perf_default {appdomain}:file rw_file_perms;
+
 allow hal_perf_default {
  sysfs_battery_supply
+ sysfs_cpu_boost
+ sysfs_devfreq
+ sysfs_mpdecision
+ sysfs_msm_power
+ sysfs_msm_perf
+ sysfs_memory
 }:dir r_dir_perms;
 
 allow hal_perf_default {
  sysfs_battery_supply
+ sysfs_cpu_boost
+ sysfs_devfreq
+ sysfs_mpdecision
+ sysfs_msm_power
+ sysfs_msm_perf
+ sysfs_memory
 }:file rw_file_perms;
+
+# Allow to self kill capability
+allow hal_perf_default self:capability { kill };
+
+allow hal_perf_default hal_perf_default:capability { dac_override };
+allow hal_perf_default init:dir { read search open };
+allow hal_perf_default kernel:dir { read search open };
+allow hal_perf_default surfaceflinger:dir { search };
+allow hal_perf_default system_server:dir { search };
+allow hal_perf_default system_server:file { getattr open read };
