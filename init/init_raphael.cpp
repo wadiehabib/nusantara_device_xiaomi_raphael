@@ -93,5 +93,7 @@ void vendor_load_properties() {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
 
+    property_override("ro.apex.updatable", "false");
+
     load_dalvik_properties();
 }
