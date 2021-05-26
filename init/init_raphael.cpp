@@ -90,7 +90,9 @@ void vendor_load_properties() {
     } else {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
-
+    
+    property_override("ro.apex.updatable", "false");
+    
     // Safetynet Workaround
     property_override("ro.boot.verifiedbootstate", "green");
     property_override("ro.oem_unlock_supported", "0");
