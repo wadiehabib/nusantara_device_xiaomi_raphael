@@ -458,3 +458,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     vendor.qti.hardware.wifi.hostapd@1.2 \
     vendor.qti.hardware.wifi.supplicant@2.2
+
+# b/189477034: Bypass build time check on uses_libs until vendor fixes all their apps
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
