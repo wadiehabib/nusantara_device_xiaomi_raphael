@@ -33,7 +33,14 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Permissions
 PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/etc/permissions/android.hardware.telephony.ims.xml \
-   frameworks/native/data/etc/android.software.controls.xml:system/etc/permissions/android.software.controls.xml
+   frameworks/native/data/etc/android.software.controls.xml:system/etc/permissions/android.software.controls.xml \
+   $(LOCAL_PATH)/configs/android.hardware.camera.ar.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/android.hardware.camera.ar.xml \
+   $(LOCAL_PATH)/configs/android.hardware.gamepad.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/android.hardware.gamepad.xml \
+   $(LOCAL_PATH)/configs/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/android.hardware.vr.high_performance.xml \
+   $(LOCAL_PATH)/configs/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/com.google.android.dialer.support.xml \
+   $(LOCAL_PATH)/configs/google_build.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google_build.xml \
+   $(LOCAL_PATH)/configs/nexus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/nexus.xml \
+   $(LOCAL_PATH)/configs/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
