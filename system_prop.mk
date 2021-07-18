@@ -15,6 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.privapp.list=com.android.camera \
     persist.camera.sat.fallback.dist=40 \
     persist.camera.sat.fallback.dist.d=10 \
     persist.camera.sat.fallback.luxindex=330 \
