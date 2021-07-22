@@ -37,13 +37,13 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
-   $(LOCAL_PATH)/configs/android.hardware.camera.ar.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.ar.xml \
-   $(LOCAL_PATH)/configs/android.hardware.gamepad.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.gamepad.xml \
-   $(LOCAL_PATH)/configs/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.vr.high_performance.xml \
-   $(LOCAL_PATH)/configs/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.dialer.support.xml \
-   $(LOCAL_PATH)/configs/google_build.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/google_build.xml \
-   $(LOCAL_PATH)/configs/nexus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/nexus.xml \
-   $(LOCAL_PATH)/configs/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/pixel_2016_exclusive.xml
+   $(LOCAL_PATH)/configs/android.hardware.camera.ar.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/android.hardware.camera.ar.xml \
+   $(LOCAL_PATH)/configs/android.hardware.gamepad.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/android.hardware.gamepad.xml \
+   $(LOCAL_PATH)/configs/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/android.hardware.vr.high_performance.xml \
+   $(LOCAL_PATH)/configs/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/com.google.android.dialer.support.xml \
+   $(LOCAL_PATH)/configs/google_build.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google_build.xml \
+   $(LOCAL_PATH)/configs/nexus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/nexus.xml \
+   $(LOCAL_PATH)/configs/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml
 
 # Audio
 PRODUCT_PACKAGES += \
