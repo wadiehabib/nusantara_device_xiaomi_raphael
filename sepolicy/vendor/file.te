@@ -6,3 +6,6 @@ type thermal_data_file, data_file_type, file_type;
 
 # Nodes
 type sysfs_fod, sysfs_type, fs_type;
+
+#HBM
+type vendor_sysfs_hbm, sysfs_type, fs_type;
