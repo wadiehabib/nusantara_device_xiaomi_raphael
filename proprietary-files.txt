@@ -864,30 +864,30 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
-# Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/powerhint.xml
-vendor/lib/libperfconfig.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libperfioctl.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-util.so
-vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters-ns.so
-vendor/lib64/libmeters.so
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libperfioctl.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
+# Perf - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|1084c4b0b18140cfc57ca1349cada93daf15d3f9
+vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
+vendor/etc/perf/commonresourceconfigs.xml|c80efdafc6c5ef4fe0602f4ffe3137092513db38
+vendor/etc/perf/perfboostsconfig.xml|93e57b38e327bfbc174e925d639745e66949229b
+vendor/etc/perf/perfconfigstore.xml|62f780c6f974a62d18a66d0dcee30efb04903512
+vendor/etc/perf/targetconfig.xml|95f511bb4030b2755a0b340814fe41cccac994ab
+vendor/etc/perf/targetresourceconfigs.xml|44e33511b57320fade366bfd5be83dcf5930f540
+vendor/etc/powerhint.xml|f35137c8f5068d03bba832b995e3e89b1ad718c2
+vendor/lib/libperfconfig.so|6fa5d6abf45071631e019bd66e36aacb13abbd44
+vendor/lib/libperfgluelayer.so|f524471e9d3906be59404b04526928be53c3d91a
+vendor/lib/libperfioctl.so|00164c19fa1dbf534f15b0a8bc2fc8d3a11ee2fb
+vendor/lib/libqti-perfd-client.so|950db15ae0975e1fca303f68e6225fdccb1e65a0
+vendor/lib/libqti-perfd.so|75bbba5df2bb91ce27c086d21e41ea7663833550
+vendor/lib/libqti-util.so|0df759036ecbcd6f3f941ed343191ada8a7fd452
+vendor/lib64/liblearningmodule.so|0df595fb747f49741681c2911fff63534d3e3298
+vendor/lib64/libmeters-ns.so|0c177ca6998f74b2300808259102d4295c335e08
+vendor/lib64/libmeters.so|7755c87fcbbc89aff53fa3957bcdf81832eca746
+vendor/lib64/libperfconfig.so|155e89154486397f0b7bb3bec4ada6984c0afb31
+vendor/lib64/libperfgluelayer.so|5ca8539fe9ff73d2f055e36bed27eab79d2a55b2
+vendor/lib64/libperfioctl.so|2d100455539eff776a993e1df6751cda6e584581
+vendor/lib64/libqti-perfd-client.so|c626ee8739a4a181f7f3b92a91bc7442b73b6541
+vendor/lib64/libqti-perfd.so|44aecc9cac81bcc213a421d67c39ffc47d1df896
+vendor/lib64/libqti-util.so|c124ab8af6610d1bfce76272289a24f97f5f1a7d
 
 # QCC
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
