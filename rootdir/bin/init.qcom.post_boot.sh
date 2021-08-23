@@ -45,7 +45,7 @@ function 8953_sched_dcvs_eas()
         echo 652800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 
         #input boost params
-        echo 1401600 > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo 0 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
         # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
@@ -71,6 +71,7 @@ function 8953_sched_dcvs_eas()
     else
         #governor settings
         echo 1 > /sys/devices/system/cpu/cpu0/online
+	echo 1 > /sys/kernel/fast_charge/force_fast_charge
         echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
         echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us
@@ -102,7 +103,7 @@ function 8917_sched_dcvs_eas()
         echo 960000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 
         #input boost params
-        echo 1094400 > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo 0 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
         # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
@@ -166,7 +167,7 @@ function 8937_sched_dcvs_eas()
         echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 
         #input boost params
-        echo 109440 > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo 0 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
         # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
@@ -719,10 +720,10 @@ function sdm660_sched_schedutil_dcvs() {
 
     #if the kernel version >=4.19,set input_boost_freq accordingly
     if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 19 ]; then
-        echo "0:1401600" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+        echo "0:0" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
         echo 40 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
     else
-        echo "0:1401600" > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
     fi
 
@@ -871,7 +872,7 @@ if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$Produc
       configure_zram_parameters
       configure_read_ahead_kb_values
       echo 0 > /proc/sys/vm/page-cluster
-      echo 100 > /proc/sys/vm/swappiness
+      echo 0 > /proc/sys/vm/swappiness
 else
     arch_type=`uname -m`
 
@@ -976,7 +977,7 @@ else
     # Set allocstall_threshold to 0 for all targets.
     # Set swappiness to 100 for all targets
     echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
-    echo 100 > /proc/sys/vm/swappiness
+    echo 0 > /proc/sys/vm/swappiness
 
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
@@ -1282,7 +1283,7 @@ case "$target" in
                 echo 20 > /sys/module/cpu_boost/parameters/boost_ms
                 echo 1728000 > /sys/module/cpu_boost/parameters/sync_threshold
                 echo 100000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
-                echo 1497600 > /sys/module/cpu_boost/parameters/input_boost_freq
+                echo 0 > /sys/module/cpu_boost/parameters/input_boost_freq
                 echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
             ;;
             *)
@@ -3203,7 +3204,7 @@ case "$target" in
       echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
       echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
-      echo "0:1209600" > /sys/module/cpu_boost/parameters/input_boost_freq
+      echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
       echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
       # Set Memory parameters
@@ -3464,7 +3465,7 @@ case "$target" in
       echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
       echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
-      echo "0:1209600" > /sys/module/cpu_boost/parameters/input_boost_freq
+      echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
       echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
       # Set Memory parameters
@@ -3565,7 +3566,7 @@ case "$target" in
             echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
             echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
-            echo "0:1248000" > /sys/module/cpu_boost/parameters/input_boost_freq
+            echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
             echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
             # Set Memory parameters
@@ -3716,7 +3717,7 @@ case "$target" in
         # Enable conservative pl
         echo 1 > /proc/sys/kernel/sched_conservative_pl
 
-        echo "0:1228800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+        echo "0:0" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
         echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
         # Set Memory parameters
@@ -3724,7 +3725,7 @@ case "$target" in
 
         if [ `cat /sys/devices/soc0/revision` == "2.0" ]; then
              # r2.0 related changes
-             echo "0:1075200" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+             echo "0:0" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
              echo 610000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
              echo 1075200 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
              echo 1152000 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_freq
@@ -3877,7 +3878,7 @@ case "$target" in
         # Enable conservative pl
         echo 1 > /proc/sys/kernel/sched_conservative_pl
 
-        echo "0:1248000" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+        echo "0:0" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
         echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
         # Set Memory parameters
@@ -4014,7 +4015,7 @@ case "$target" in
             echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rtg_boost_freq
 
-            echo "0:1017600" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+            echo "0:0" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
             echo 80 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 	    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
@@ -4203,7 +4204,7 @@ case "$target" in
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
     echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
-    echo "0:1248000" > /sys/module/cpu_boost/parameters/input_boost_freq
+    echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
     echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
     # Set Memory parameters
@@ -4344,7 +4345,7 @@ case "$target" in
       echo 1344000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
       echo 825600 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
 
-      echo "0:1209600" > /sys/module/cpu_boost/parameters/input_boost_freq
+      echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
       echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
       # Enable bus-dcvs
@@ -4393,7 +4394,7 @@ case "$target" in
 
             # Turn on sleep modes.
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
-            echo 100 > /proc/sys/vm/swappiness
+            echo 0 > /proc/sys/vm/swappiness
             ;;
         esac
     ;;
@@ -4442,7 +4443,7 @@ case "$target" in
         echo 20 > /sys/module/cpu_boost/parameters/boost_ms
         echo 1728000 > /sys/module/cpu_boost/parameters/sync_threshold
         echo 100000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
-        echo 1497600 > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo 0 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
         echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -4561,7 +4562,7 @@ case "$target" in
         # plugin remaining A57s
         echo 1 > /sys/devices/system/cpu/cpu5/online
         # input boost configuration
-        echo 0:1248000 > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo 0:0 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         # Enable task migration fixups in the scheduler
         echo 1 > /proc/sys/kernel/sched_migration_fixup
@@ -4663,7 +4664,7 @@ case "$target" in
         # Restore CPU 4 max freq from msm_performance
         echo "4:4294967295 5:4294967295 6:4294967295 7:4294967295" > /sys/module/msm_performance/parameters/cpu_max_freq
         # input boost configuration
-        echo 0:1344000 > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo 0:0 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         # Setting b.L scheduler parameters
         echo 1 > /proc/sys/kernel/sched_migration_fixup
@@ -4732,7 +4733,7 @@ case "$target" in
         echo $bcl_soc_hotplug_mask > /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask
         echo -n enable > /sys/devices/soc/soc:qcom,bcl/mode
         # input boost configuration
-        echo "0:1324800 2:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo "0:0 2:0" > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         # Setting b.L scheduler parameters
         echo 0 > /proc/sys/kernel/sched_boost
@@ -4865,7 +4866,7 @@ case "$target" in
 	echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rate_limit_us
 	echo 1574400 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/pl
-	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
+	echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
 	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
 	# Limit the min frequency to 825MHz
 	echo 825000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
@@ -4949,7 +4950,7 @@ case "$target" in
 	echo N > /sys/module/lpm_levels/L3/l3-dyn-ret/idle_enabled
         # Turn on sleep modes.
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
-	echo 100 > /proc/sys/vm/swappiness
+	echo 0 > /proc/sys/vm/swappiness
 	echo 120 > /proc/sys/vm/watermark_scale_factor
     ;;
 esac
@@ -5019,7 +5020,7 @@ case "$target" in
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 
 	# configure input boost settings
-	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
+	echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
 	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
 
 	# Disable wsf, beacause we are using efk.
@@ -5204,7 +5205,7 @@ case "$target" in
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 
 	# configure input boost settings
-	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
+	echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
 	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
 
 	# Disable wsf, beacause we are using efk.
@@ -5435,7 +5436,7 @@ case "$target" in
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 	# configure input boost settings
-	echo "0:1324800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+	echo "0:0" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 	# configure governor settings for gold cluster
@@ -5606,7 +5607,7 @@ case "$target" in
         echo 1 > /sys/module/msm_thermal/core_control/enabled
 
         # Enable input boost configuration
-        echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
+        echo "0:0" > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         # Enable bus-dcvs
         for cpubw in /sys/class/devfreq/*qcom,cpubw*
