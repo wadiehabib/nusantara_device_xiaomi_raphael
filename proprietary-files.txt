@@ -888,6 +888,7 @@ vendor/lib64/libperfioctl.so|2d100455539eff776a993e1df6751cda6e584581
 vendor/lib64/libqti-perfd-client.so|c626ee8739a4a181f7f3b92a91bc7442b73b6541
 vendor/lib64/libqti-perfd.so|44aecc9cac81bcc213a421d67c39ffc47d1df896
 vendor/lib64/libqti-util.so|c124ab8af6610d1bfce76272289a24f97f5f1a7d
+vendor/lib64/vendor.qti.hardware.perf@2.2.so|f49863fd5313ccb7a0af2e16c0bae7d4de1ff5ca
 
 # QCC
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
