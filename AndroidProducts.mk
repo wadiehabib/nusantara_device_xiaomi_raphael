@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ancient_raphael.mk
+    $(LOCAL_DIR)/nad_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    ancient_raphael-user \
-    ancient_raphael-userdebug \
-    ancient_raphael-eng
+    nad_raphael-user \
+    nad_raphael-userdebug \
+    nad_raphael-eng
