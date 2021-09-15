@@ -53,3 +53,5 @@
 # HBM
 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm           u:object_r:vendor_sysfs_hbm:s0
 
+# USB
+/vendor/bin/init\.mi\.usb\.sh                                                                          u:object_r:vendor_qti_init_shell_exec:s0
