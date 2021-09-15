@@ -60,21 +60,21 @@ void load_raphaelglobal() {
     property_override("ro.product.model", "Mi 9T Pro");
     property_override("ro.build.product", "raphael");
     property_override("ro.product.device", "raphael");
-    property_override("ro.build.description", "walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys");
+    property_override("ro.build.description", "coral-user 11 RQ3A.210905.001 7511028 release-keys");
 }
 
 void load_raphaelin() {
     property_override("ro.product.model", "Redmi K20 Pro");
     property_override("ro.build.product", "raphaelin");
     property_override("ro.product.device", "raphaelin");
-    property_override("ro.build.description", "walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys");
+    property_override("ro.build.description", "coral-user 11 RQ3A.210905.001 7511028 release-keys");
 }
 
 void load_raphael() {
     property_override("ro.product.model", "Redmi K20 Pro");
     property_override("ro.build.product", "raphael");
     property_override("ro.product.device", "raphael");
-    property_override("ro.build.description", "walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys");
+    property_override("ro.build.description", "coral-user 11 RQ3A.210905.001 7511028 release-keys");
 }
 
 
@@ -90,14 +90,14 @@ void vendor_load_properties() {
     } else {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
-    
+
     property_override("ro.apex.updatable", "false");
-    
+
     // Safetynet Workaround
     property_override("ro.boot.verifiedbootstate", "green");
     property_override("ro.oem_unlock_supported", "0");
 
-    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    property_override("ro.build.fingerprint", "google/coral/coral:11/RQ3A.210905.001/7511028:user/release-keys");
 
     load_dalvik_properties();
 }
