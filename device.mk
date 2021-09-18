@@ -365,10 +365,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.xiaomi_msmnile
-
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
