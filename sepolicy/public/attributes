@@ -1,2 +1,3 @@
 hal_attribute_nad(mlipay)
 hal_attribute_nad(motor)
+hal_attribute_nad(touchfeature)
