@@ -4,6 +4,8 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 
 # Display
 debug.sf.disable_backpressure=1
+debug.sf.enable_gl_backpressure=1
+debug.sf.latch_unsignaled=1
 debug.sf.enable_hwc_vds=1
 
 # GPS
