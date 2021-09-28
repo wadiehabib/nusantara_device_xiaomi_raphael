@@ -258,6 +258,10 @@ PRODUCT_PACKAGES += \
     init.xiaomi.rc \
     ueventd.qcom.rc
 
+# IMS
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay
+
 # IFAA manager
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
