@@ -90,8 +90,8 @@ void set_device_props(const std::string fingerprint, const std::string descripti
 
 void vendor_load_properties() {
     // SafetyNet madness
-    char const fp[] = "google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys";
-    char const fp_desc[] = "redfin-user 11 RQ3A.210905.001 7511028 release-keys";
+    char const fp[] = "google/redfin/redfin:11/RQ3A.211001.001/7641976:user/release-keys";
+    char const fp_desc[] = "redfin-user 11 RQ3A.211001.001 7641976 release-keys";
 
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
