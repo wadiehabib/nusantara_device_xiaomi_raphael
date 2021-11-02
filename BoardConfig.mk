@@ -1,4 +1,3 @@
-
 # Copyright (C) 2019 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -151,7 +150,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
 include device/qcom/sepolicy/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
