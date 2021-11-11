@@ -8,6 +8,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.library_name=libbluetooth_qti.so \
     vendor.bluetooth.soc=cherokee
 
+# Blur
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sysui.disableBlur=true
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.sat.fallback.dist=40 \
