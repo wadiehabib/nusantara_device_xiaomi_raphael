@@ -127,8 +127,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # https://docs.google.com/spreadsheets/d/1a_5cVNY3LUAkeg-yL56rYQNwved6Hy-dvEcKSxp6f8k/edit
 PRODUCT_PROPERTY_OVERRIDES += debug.sf.use_phase_offsets_as_durations=1
 PRODUCT_PROPERTY_OVERRIDES += debug.sf.late.sf.duration=10500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.late.app.duration=20500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.sf.duration=21000000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.app.duration=16500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.sf.duration=13500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=21000000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.late.app.duration=16600000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.sf.duration=16600000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.app.duration=16600000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.sf.duration=16600000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=16600000
