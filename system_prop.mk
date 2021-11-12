@@ -132,3 +132,6 @@ PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.sf.duration=16600000
 PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.app.duration=16600000
 PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.sf.duration=16600000
 PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=16600000
+
+# Settings provider
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.fflag.override.settings_provider_model=false
