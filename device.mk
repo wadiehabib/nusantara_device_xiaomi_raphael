@@ -279,9 +279,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
-# IFAA manager
-include vendor/xiaomi/raphael-extra/ifaa.mk
-
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
