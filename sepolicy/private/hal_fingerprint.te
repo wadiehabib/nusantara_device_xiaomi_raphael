@@ -1,0 +1,6 @@
+allow hal_fingerprint hal_fingerprint:binder { call  transfer};
+allow hal_fingerprint sysfs_tp_fodstatus:file rw_file_perms;
+allow hal_fingerprint hal_displayfeature_xiaomi_default:binder {call};
+allow hal_fingerprint hal_displayfeature_xiaomi_hwservice:hwservice_manager find;
+allow hal_fingerprint hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
+get_prop(hal_fingerprint, vendor_adsprpc_prop)
