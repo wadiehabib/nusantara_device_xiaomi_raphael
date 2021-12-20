@@ -89,5 +89,9 @@ void vendor_load_properties() {
 
     property_override("ro.apex.updatable", "false");
 
+// Safetynet Workaround
+property_override("ro.boot.verifiedbootstate", "green");
+property_override("ro.oem_unlock_supported", "0");
+
     load_dalvik_properties();
 }
