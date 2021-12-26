@@ -155,6 +155,9 @@ ro.vendor.perf.scroll_opt=true
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
 
+# Printk
+persist.vendor.console.silent.config=1
+
 # RIL
 persist.vendor.qti.telephony.vt_cam_interface=2
 persist.vendor.radio.add_power_save=1
