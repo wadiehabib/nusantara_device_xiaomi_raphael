@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2021 The Android Open Source Project
+     Copyright (C) 2015-2018 AOSiP
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -11,7 +11,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <!-- SparkOS maintainer -->
-    <string name="spark_maintainer">Naveen Johnson</string>
-</resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="ancient_device_name_summary">Xiaomi Mi 9T Pro</string>
+    <string name="ancient_chipset_type_summary">Qualcomm SD855</string>
+    <string name="ancient_gpu_summary">Adreno 640</string>
+    <string name="ancient_camera_mp_summary">48MP+13MP+8MP+20MP</string>
+    <string name="ancient_screen_type_summary">SuperAMOLED 6.39"</string>
+    <string name="maintainer_name">Wadie Habib</string>
+
+</resources> 
