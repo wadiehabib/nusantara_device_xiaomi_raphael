@@ -280,11 +280,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # IFAA manager
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
+include vendor/xiaomi/raphael-extra/ifaa.mk
 
 # Init
 PRODUCT_PACKAGES += \
