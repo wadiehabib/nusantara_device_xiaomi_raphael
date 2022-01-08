@@ -24,5 +24,11 @@
    "repository"   : "NusantaraROM-Devices/vendor_xiaomi_sm8250-common-extra",
    "target_path"  : "vendor/xiaomi/raphael-extra",
    "branch"       : "12"
+   },
+   {
+   "remote":"github",
+   "repository":"naveenjohnsonv/hardware_qcom-caf_sm8150_display",
+   "target_path":"hardware/qcom-caf/sm8150/display",
+   "branch":"12_soviet"
    }
 ]

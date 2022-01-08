@@ -1,0 +1,8 @@
+[
+  {
+    "remote":"nad",
+    "repository":"android_hardware_qcom_display",
+    "target_path":"hardware/qcom-caf/sm8150/display",
+    "branch":"12-sm8150"
+  }
+]
