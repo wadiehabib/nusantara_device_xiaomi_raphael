@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2019 The LineageOS Project
 #
@@ -22,7 +23,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 NAD_BUILD_TYPE := OFFICIAL
 #USE_GAPPS ?= true
 #TARGET_GAPPS_ARCH := arm64
-#TARGET_FOD_ANIMATIONS := true
 USE_LAWNCHAIR := true
 
 BUILD_FINGERPRINT := "google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys"
@@ -33,3 +33,4 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_USES_BLUR := true
 #USE_PIXEL_CHARGING := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+EXTRA_FOD_ANIMATIONS := true
