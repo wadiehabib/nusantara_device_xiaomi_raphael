@@ -396,6 +396,12 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
 
+# Preopt System Apps
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    Settings \
+    Lawnchair
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2 \
