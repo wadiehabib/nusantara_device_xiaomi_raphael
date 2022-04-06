@@ -23,7 +23,10 @@
 
     <!-- Statusbar Left-Right padding defaults -->
     <integer name="config_statusbarPaddingStartDef">16</integer>
-    <integer name="config_statusbarPaddingEndDef">5</integer>
+    <integer name="config_statusbarPaddingEndDef">8</integer>
+
+    <!-- Height of the status bar in portrait -->
+    <dimen name="status_bar_height">35dp</dimen>
 
     <!-- Night Light FOD -->
     <bool name="disable_fod_night_light">true</bool>
