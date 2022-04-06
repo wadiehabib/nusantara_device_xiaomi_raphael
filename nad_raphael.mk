@@ -20,9 +20,9 @@ PRODUCT_NAME := nad_raphael
 PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-BUILD_FINGERPRINT := "google/redfin/redfin:12/SP2A.220305.012/8177914:user/release-keys"
+BUILD_FINGERPRINT := "google/raven/raven:12/SP2A.220405.003/8210211:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRIVATE_BUILD_DESC="redfin-user 12 SP2A.220305.012 8177914 release-keys"
+        PRIVATE_BUILD_DESC="raven-user 12 SP2A.220405.003 8210211 release-keys"
 
 # NAD Flags
 NAD_BUILD_TYPE := OFFICIAL
