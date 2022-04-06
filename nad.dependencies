@@ -18,11 +18,5 @@
    "target_path"  : "prebuilts/clang/host/linux-x86/clang-azure",
    "branch"       : "main",
    "clone-depth"  : "1"
-   },
-   {
-   "remote"       : "github",
-   "repository"   : "wadiehabib/hardware_qcom-caf_sm8150_display",
-   "target_path"  : "hardware/qcom-caf/sm8150/display",
-   "beanch"       : "12_soviet"
    }
 ]
