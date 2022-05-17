@@ -94,6 +94,9 @@ TARGET_USES_FOD_ZPOS := true
 DEVICE_FRAMEWORK_MANIFEST_FILE := \
     $(DEVICE_PATH)/vintf/framework_manifest.xml
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml
+
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest.xml \
     $(DEVICE_PATH)/vintf/c2_manifest.xml
