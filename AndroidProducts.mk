@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_milahaina.mk
+    $(LOCAL_DIR)/nad_milahaina.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_milahaina-eng \
-    lineage_milahaina-user \
-    lineage_milahaina-userdebug
+    nad_milahaina-eng \
+    nad_milahaina-user \
+    nad_milahaina-userdebug

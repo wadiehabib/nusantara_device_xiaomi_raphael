@@ -648,4 +648,8 @@
             <instance>wifidisplaysessionvideotrack</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>android.hardware.power</name>
+        <fqname>IPower/default</fqname>
+    </hal>
 </manifest>

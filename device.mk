@@ -41,13 +41,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.audio.bcl.enabled=false \
-    persist.vendor.audio.speaker.prot.enable=false \
-    persist.vendor.audio.vbat.enabled=false \
-    vendor.audio.spkr_prot.tx.sampling_rate=0 \
-    ro.vendor.audio.sdk.fluencetype=fluence
-
 $(call inherit-product, hardware/qcom-caf/sm8350/audio/configs/lahaina/lahaina.mk)
 $(call inherit-product, vendor/qcom/opensource/audio/configs/qssi/qssi.mk)
 
@@ -315,6 +308,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.2 \
+    android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
     android.hardware.power.stats@1.0-service.mock
 
